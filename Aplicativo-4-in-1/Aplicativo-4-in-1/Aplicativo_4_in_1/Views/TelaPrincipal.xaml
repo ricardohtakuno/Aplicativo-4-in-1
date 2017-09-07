@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace.TelaPrincipal"
+             Title="Tela Principal"
+             x:Class="Aplicativo_4_in_1.Views.TelaPrincipal">
+    <!--
+    <StackLayout>
+        <Button Text="Agendar Consulta" Clicked="AgendarConsulta_Clicked"></Button>
+        <Button Text="Cadastrar Livro" Clicked="CadastrarLivro_Clicked"></Button>
+        <Button Text="Adicionar Time" Clicked="AdicionarTime_Clicked"></Button>
+        <Button Text="Jogo da Velha" Clicked="JogoDaVelha_Clicked"></Button>
+    </StackLayout>
+    -->
+</ContentPage>

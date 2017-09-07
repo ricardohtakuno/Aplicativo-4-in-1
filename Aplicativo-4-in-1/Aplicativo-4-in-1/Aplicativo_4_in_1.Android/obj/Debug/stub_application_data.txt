@@ -1,0 +1,2 @@
+android.app.Application
+Aplicativo_4_in_1.Android

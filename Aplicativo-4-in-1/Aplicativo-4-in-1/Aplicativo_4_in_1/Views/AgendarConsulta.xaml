@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicativo_4_in_1.Views.AgendarConsulta"
+             Title="Agendar Consulta">
+    <StackLayout Padding="25">
+        <TableView Intent="Form">
+            <TableRoot Title="Agendar Consulta">
+                <TableSection>
+                    <EntryCell Label="Nome" Keyboard="Text" Text="{Binding Nome}" />
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="16,0,16,0">
+                            <Label Text="Data:" HorizontalOptions="StartAndExpand"></Label>
+                            <DatePicker HorizontalOptions="End" Date="{Binding DataAgendamento}"></DatePicker>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="16,0,16,0">
+                            <Label Text="Data:" HorizontalOptions="StartAndExpand"></Label>
+                            <TimePicker HorizontalOptions="End" Time="{Binding HoraAgendamento}"></TimePicker>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Label Text="Área" HorizontalOptions="StartAndExpand" FontSize="25"></Label>
+        <Picker x:Name="Area" HorizontalOptions="Fill" VerticalOptions="Fill"  Title="Areas">
+            <Picker.Items>
+                <x:String>Odontologia</x:String>
+                <x:String>Cardiologia</x:String>
+                <x:String>Demartologia</x:String>
+                <x:String>Ortopedia</x:String>
+                <x:String>Pediatria</x:String>
+                <x:String>Psicologia</x:String>
+            </Picker.Items>
+        </Picker>
+        <Button Text="Agendar" Clicked="Button_Clicked"></Button>
+    </StackLayout>
+</ContentPage>

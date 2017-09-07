@@ -23,7 +23,12 @@ namespace Aplicativo_4_in_1.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            var nome = txtNome.Text;
+            var data = dtpData.Date;
+            var hora = tmpTime.Time;
+            var area = pckArea.Items[pckArea.SelectedIndex];
 
+            DisplayAlert("Informações", string.Format("Nome: {0} \n\nData: {1} \n\nHora: {2} \n\nÁrea: {3}", nome, data, hora, area), "ok");
         }
 	}
 }

@@ -7,33 +7,41 @@
         <TableView Intent="Form">
             <TableRoot Title="Agendar Consulta">
                 <TableSection>
-                    <EntryCell Label="Nome" Keyboard="Text" Text="{Binding Nome}" />
+                    <EntryCell Label="Nome" x:Name="txtNome" Keyboard="Text" Text="{Binding Nome}" />
+                </TableSection>
+                <TableSection>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="16,0,16,0">
-                            <Label Text="Data:" HorizontalOptions="StartAndExpand"></Label>
-                            <DatePicker HorizontalOptions="End" Date="{Binding DataAgendamento}"></DatePicker>
+                            <Label Text="Data:" HorizontalOptions="StartAndExpand" FontSize="20"></Label>
+                            <DatePicker HorizontalOptions="End" x:Name="dtpData" Date="{Binding DataAgendamento}"></DatePicker>
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="16,0,16,0">
-                            <Label Text="Data:" HorizontalOptions="StartAndExpand"></Label>
-                            <TimePicker HorizontalOptions="End" Time="{Binding HoraAgendamento}"></TimePicker>
+                            <Label Text="Hora:" HorizontalOptions="StartAndExpand" FontSize="20"></Label>
+                            <TimePicker HorizontalOptions="End" x:Name="tmpTime" Time="{Binding HoraAgendamento}"></TimePicker>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="16,0,16,0">
+                            <Label Text="Área" HorizontalOptions="StartAndExpand" FontSize="20"></Label>
+                            <Picker x:Name="pckArea" HorizontalOptions="FillAndExpand" Title="Areas">
+                                <Picker.Items>
+                                    <x:String>Odontologia</x:String>
+                                    <x:String>Cardiologia</x:String>
+                                    <x:String>Demartologia</x:String>
+                                    <x:String>Ortopedia</x:String>
+                                    <x:String>Pediatria</x:String>
+                                    <x:String>Psicologia</x:String>
+                                </Picker.Items>
+                            </Picker>
                         </StackLayout>
                     </ViewCell>
                 </TableSection>
             </TableRoot>
         </TableView>
-        <Label Text="Área" HorizontalOptions="StartAndExpand" FontSize="25"></Label>
-        <Picker x:Name="Area" HorizontalOptions="Fill" VerticalOptions="Fill"  Title="Areas">
-            <Picker.Items>
-                <x:String>Odontologia</x:String>
-                <x:String>Cardiologia</x:String>
-                <x:String>Demartologia</x:String>
-                <x:String>Ortopedia</x:String>
-                <x:String>Pediatria</x:String>
-                <x:String>Psicologia</x:String>
-            </Picker.Items>
-        </Picker>
         <Button Text="Agendar" Clicked="Button_Clicked"></Button>
     </StackLayout>
 </ContentPage>

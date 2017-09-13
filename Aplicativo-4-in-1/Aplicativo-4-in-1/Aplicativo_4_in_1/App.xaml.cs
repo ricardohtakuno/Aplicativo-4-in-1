@@ -13,7 +13,7 @@ namespace Aplicativo_4_in_1
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage(new Views.AgendarConsulta());
+			MainPage = new NavigationPage(new Views.CadastrarLivro());
 		}
 
 		protected override void OnStart ()

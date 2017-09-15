@@ -12,6 +12,10 @@ namespace Aplicativo_4_in_1.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AdicionarTimeEscudo : ContentPage
 	{
+        public string Nome { get; set; }
+        public string Cidade { get; set; }
+        public string Jogadores { get; set; }
+
 		public AdicionarTimeEscudo ()
 		{
 			InitializeComponent ();

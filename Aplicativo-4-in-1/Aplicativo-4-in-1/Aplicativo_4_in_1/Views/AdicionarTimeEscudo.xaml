@@ -1,10 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Aplicativo_4_in_1.Views.AdicionarTimeEscudo">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="Aplicativo_4_in_1.Views.AdicionarTimeEscudo"
+             Title="Adicionar Escudo">
+
+    <StackLayout Padding="25">
+        <TableView Intent="Form">
+            <TableRoot Title="Adicionar Time">
+                <TableSection>
+                    <Label Text=""
+                    <BoxView BorderRadius="30" HeightRequest="60" WidthRequest="60" BackgroundColor="Black" HorizontalOptions="Center" VerticalOptions="Start" />
+                </TableSection>
+                <TableSection>
+                    <EntryCell Label="Nome" x:Name="txtNome" Keyboard="Text" Text="{Binding Nome}" />
+                    <EntryCell Label="Cidade" x:Name="txtCidade" Keyboard="Text" Text="{Binding Cidade}" />
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="16,0,16,0">
+                            <Label Text="Estado" HorizontalOptions="StartAndExpand"></Label>
+                            <Picker x:Name="pckEstado" HorizontalOptions="FillAndExpand" Title="Estado">
+                                <Picker.Items>
+                                    <x:String>Amazonas</x:String>
+                                    <x:String>Ceará</x:String>
+                                    <x:String>Espirito Santo</x:String>
+                                    <x:String>Goias</x:String>
+                                    <x:String>São Paulo</x:String>
+                                    <x:String>Rio de Janeiro</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection>
+                    <EntryCell Label="Número de Jogadores" x:Name="txtJogadores" Keyboard="Numeric" Text="{Binding Jogadores}" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button Text="Adicionar" Clicked="Button_Clicked"></Button>
+    </StackLayout>
 </ContentPage>

@@ -8,7 +8,7 @@
         <TableView Intent="Form">
             <TableRoot Title="Cadastrar Livro">
                 <TableSection>
-                    <EntryCell Label="ISBN:" x:Name="txtISBN" Keyboard="Numeric" Text="{Binding ISNB}" />
+                    <EntryCell Label="ISBN:" x:Name="txtISBN" Keyboard="Numeric" Text="{Binding ISBN}" />
                 </TableSection>
                 <TableSection>
                     <ViewCell>
@@ -26,17 +26,20 @@
                         <StackLayout Orientation="Horizontal" Padding="16,0,16,0">
                             <Label Text="Categoria" HorizontalOptions="StartAndExpand"></Label>
                             <Picker x:Name="pckCategoria" HorizontalOptions="FillAndExpand" Title="Categoria">
-                                <x:String>Auto Ajuda</x:String>
-                                <x:String>Aventura</x:String>
-                                <x:String>Biográficos</x:String>
-                                <x:String>Científicos</x:String>
-                                <x:String>Contos</x:String>
-                                <x:String>Didáticos</x:String>
-                                <x:String>Fantasia</x:String>
-                                <x:String>Ficção Científica</x:String>
-                                <x:String>Horror</x:String>
+                                <Picker.Items>
+                                    <x:String>Auto Ajuda</x:String>
+                                    <x:String>Aventura</x:String>
+                                    <x:String>Biográficos</x:String>
+                                    <x:String>Científicos</x:String>
+                                    <x:String>Contos</x:String>
+                                    <x:String>Didáticos</x:String>
+                                    <x:String>Fantasia</x:String>
+                                    <x:String>Ficção Científica</x:String>
+                                    <x:String>Horror</x:String>
+                                </Picker.Items>
                             </Picker>
                         </StackLayout>
+                    </ViewCell>
                 </TableSection>
             </TableRoot>
         </TableView>

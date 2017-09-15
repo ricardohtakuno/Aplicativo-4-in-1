@@ -21,7 +21,12 @@ namespace Aplicativo_4_in_1.Views
 		}
         private void Button_Clicked(object sender, EventArgs e)
         {
+            var ISBN = txtISBN.Text;
+            var data = dtpData.Date;
+            var Titulo = txtTitulo.Text;
+            var categoria = pckCategoria.Items[pckCategoria.SelectedIndex];
 
+            DisplayAlert("Informações", string.Format("ISBN: {0} \n\nData: {1} \n\nTitulo: {2} \n\nCategoria: {3}", ISBN, data, Titulo, categoria), "ok");
         }
 	}
 }
